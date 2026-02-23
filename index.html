@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GTA II Web V2_0_0</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hud.css" />
+</head>
+<body>
+  <div id="gameRoot">
+    <canvas id="game" width="960" height="540" aria-label="GTA2 Web V1_2_0 canvas"></canvas>
+
+    <div id="hud">
+      <div class="row">
+        <div>❤️ <span id="hudHealth">100</span></div>
+        <div><span id="hudArmor"></span></div>
+        <div>💰 <span id="hudMoney">0</span></div>
+        <div>🔫 <span id="hudWeapon">Pistol</span></div>
+      </div>
+      <div class="row">
+        <div>🎯 <span id="hudMission">—</span></div>
+        <div>📌 <span id="hudMissionStatus">—</span></div>
+        <div>⭐ <span id="hudWanted">—</span></div>
+      </div>
+      <div class="row gang-row">
+        <span id="hudGangRep"></span>
+      </div>
+      <div class="row help">
+        ZQSD/↑↓←→: Bouger &nbsp;|&nbsp;
+        Souris: Viser &nbsp;|&nbsp;
+        Clic: Tirer &nbsp;|&nbsp;
+        Enter: Véhicule &nbsp;|&nbsp;
+        F: Arme suivante &nbsp;|&nbsp;
+        1-6: Arme directe &nbsp;|&nbsp;
+        T: Téléphone &nbsp;|&nbsp;
+        Shift+M: Mine (si stocks) &nbsp;|&nbsp;
+        Shift+O: Huile (si stocks) &nbsp;|&nbsp;
+        B: Bombe voiture &nbsp;|&nbsp;
+        M: Mission suivante &nbsp;|&nbsp;
+        F5: Save (serveur/local) &nbsp;|&nbsp;
+        F9: Load
+      </div>
+    </div>
+
+    <div id="toast" aria-live="polite"></div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
