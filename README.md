@@ -1,14 +1,14 @@
-# GTA II Web — V2_0_0 COMPLETE EDITION
+# GTA II WebV2_0_0
 
 Remake jouable de GTA 2 en greybox (sans textures), 100% HTML/CSS/JS.
-Canvas 2D pur — aucune dépendance externe.
+Canvas 2D pur â€” aucune dÃ©pendance externe.
 
-## Nouveautés V2_0_0
+## NouveautÃ©s V2_0_0
 
-- **ScriptEngine** : 7 missions scriptées (First Contact, El Pistolero, Rouleau Compresseur, Yakuza Rising, Hit & Run, Gangland, The Big Score)
-- **AudioSystem** : sons procéduraux 100% Web Audio API (tirs, explosions, moteur, sirènes, pickup, WASTED, BUSTED, téléphone)
-- **OverlaySystem** : WASTED / BUSTED plein écran + minimap dynamique en temps réel
-- **Gang AI** : les peds de gang attaquent le joueur si réputation négative
+- **ScriptEngine** : 7 missions scriptÃ©es (First Contact, El Pistolero, Rouleau Compresseur, Yakuza Rising, Hit & Run, Gangland, The Big Score)
+- **AudioSystem** : sons procÃ©duraux 100% Web Audio API (tirs, explosions, moteur, sirÃ¨nes, pickup, WASTED, BUSTED, tÃ©lÃ©phone)
+- **OverlaySystem** : WASTED / BUSTED plein Ã©cran + minimap dynamique en temps rÃ©el
+- **Gang AI** : les peds de gang attaquent le joueur si rÃ©putation nÃ©gative
 - **Auto-fire** : Uzi et Lance-flammes tirent en continu avec clic maintenu
 
 ## Lancement
@@ -20,74 +20,74 @@ python3 -m http.server 8080
 # Ouvrir http://localhost:8080
 ```
 
-## Contrôles
+## ContrÃ´les
 
 | Touche | Action |
 |--------|--------|
-| Z/Q/S/D ou ↑↓←→ | Déplacement (tank controls) |
+| Z/Q/S/D ou â†‘â†“â†â†’ | DÃ©placement (tank controls) |
 | Souris | Viser |
 | Clic gauche | Tirer (maintenu = auto-fire si Uzi/Flammes) |
-| Enter | Entrer/Sortir du véhicule |
+| Enter | Entrer/Sortir du vÃ©hicule |
 | F | Arme suivante |
-| 1-6 | Sélection directe arme |
-| T | Répondre au téléphone |
+| 1-6 | SÃ©lection directe arme |
+| T | RÃ©pondre au tÃ©lÃ©phone |
 | Shift+M | Poser une mine (si stocks) |
-| Shift+O | Déposer huile (si dans véhicule) |
+| Shift+O | DÃ©poser huile (si dans vÃ©hicule) |
 | B | Activer bombe voiture |
-| H | Sirène (si CopCar) |
+| H | SirÃ¨ne (si CopCar) |
 | M | Mission suivante (fallback) |
-| F5 | Sauvegarder (nécessite PHP) |
+| F5 | Sauvegarder (nÃ©cessite PHP) |
 
 ## Armes
 
-| # | Arme | Type | Dégâts | Portée |
+| # | Arme | Type | DÃ©gÃ¢ts | PortÃ©e |
 |---|------|------|--------|--------|
 | 1 | Pistolet | Hitscan | 18 | 280px |
 | 2 | Uzi | Hitscan auto | 8 | 200px |
-| 3 | Fusil à pompe | Hitscan x6 | 14/pellet | 180px |
-| 4 | Lance-flammes | Cône auto | 4/tick | 110px |
+| 3 | Fusil Ã  pompe | Hitscan x6 | 14/pellet | 180px |
+| 4 | Lance-flammes | CÃ´ne auto | 4/tick | 110px |
 | 5 | Grenade | Projectile | 65 AoE | 80px radius |
 | 6 | Bazooka | Projectile | 100 AoE | 100px radius |
 
-## Gangs & Réputation
+## Gangs & RÃ©putation
 
-- **Zaibatsu** (rouge) — zone Nord-Est
-- **Loonies** (orange) — zone Sud-Ouest  
-- **Yakuza** (cyan) — zone Nord-Ouest
+- **Zaibatsu** (rouge) â€” zone Nord-Est
+- **Loonies** (orange) â€” zone Sud-Ouest  
+- **Yakuza** (cyan) â€” zone Nord-Ouest
 
-R�putation -100 à +100 :
-- ≥ +20 : allié (t'ignore)
-- -20 à +20 : neutre
-- ≤ -20 : ennemi (attaque)
+R©putation -100 Ã  +100 :
+- â‰¥ +20 : alliÃ© (t'ignore)
+- -20 Ã  +20 : neutre
+- â‰¤ -20 : ennemi (attaque)
 
-## Missions (7 scriptées)
+## Missions (7 scriptÃ©es)
 
-1. **First Contact** — Introduction, collecte d'argent
-2. **El Pistolero** — Zaibatsu : éliminer une cible + fuir
-3. **Rouleau Compresseur** — Loonies : voler et livrer un véhicule
-4. **Yakuza Rising** — Yakuza : livraison à pied + véhicule
-5. **Hit & Run** — Course contre la montre (60 secondes)
-6. **Gangland** — Défendre une zone (éliminer 3 ennemis)
-7. **The Big Score** — Mission finale : braquage + évasion
+1. **First Contact** â€” Introduction, collecte d'argent
+2. **El Pistolero** â€” Zaibatsu : Ã©liminer une cible + fuir
+3. **Rouleau Compresseur** â€” Loonies : voler et livrer un vÃ©hicule
+4. **Yakuza Rising** â€” Yakuza : livraison Ã  pied + vÃ©hicule
+5. **Hit & Run** â€” Course contre la montre (60 secondes)
+6. **Gangland** â€” DÃ©fendre une zone (Ã©liminer 3 ennemis)
+7. **The Big Score** â€” Mission finale : braquage + Ã©vasion
 
 ## Architecture
 
 ```
 js/
-├── audio/          AudioSystem.js
-├── core/           Game.js, Time.js, Effects.js
-├── entities/       Player, Ped, Vehicle, CopCar, CopPed
-├── gameplay/       WeaponSystem, ProjectileSystem, WantedSystem
-├── gang/           GangSystem
-├── garage/         GarageSystem
-├── hazard/         HazardSystem
-├── input/          Input
-├── missions/       MissionManager, PhoneSystem
-├── physics/        Physics, AABB, OBB, SpatialHash, EntityCollisions
-├── pickup/         PickupSystem
-├── police/         PoliceManager, PoliceNav
-├── render/         Renderer2D
-├── script/         ScriptEngine, MissionScripts
-├── ui/             HUD, OverlaySystem
-└── world/          Camera, Map, MapLoader, RoadGraph, createWorld
+â”œâ”€â”€ audio/          AudioSystem.js
+â”œâ”€â”€ core/           Game.js, Time.js, Effects.js
+â”œâ”€â”€ entities/       Player, Ped, Vehicle, CopCar, CopPed
+â”œâ”€â”€ gameplay/       WeaponSystem, ProjectileSystem, WantedSystem
+â”œâ”€â”€ gang/           GangSystem
+â”œâ”€â”€ garage/         GarageSystem
+â”œâ”€â”€ hazard/         HazardSystem
+â”œâ”€â”€ input/          Input
+â”œâ”€â”€ missions/       MissionManager, PhoneSystem
+â”œâ”€â”€ physics/        Physics, AABB, OBB, SpatialHash, EntityCollisions
+â”œâ”€â”€ pickup/         PickupSystem
+â”œâ”€â”€ police/         PoliceManager, PoliceNav
+â”œâ”€â”€ render/         Renderer2D
+â”œâ”€â”€ script/         ScriptEngine, MissionScripts
+â”œâ”€â”€ ui/             HUD, OverlaySystem
+â””â”€â”€ world/          Camera, Map, MapLoader, RoadGraph, createWorld
 ```
