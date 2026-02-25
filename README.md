@@ -11,15 +11,6 @@ Canvas 2D pur — aucune dépendance externe.
 - **Gang AI** : les peds de gang attaquent le joueur si réputation négative
 - **Auto-fire** : Uzi et Lance-flammes tirent en continu avec clic maintenu
 
-## Lancement
-
-Serveur web local requis (fetch JSON) :
-```
-cd GTA_II_Web_V2_0_0
-python3 -m http.server 8080
-# Ouvrir http://localhost:8080
-```
-
 ## Contrôles
 
 | Touche | Action |
